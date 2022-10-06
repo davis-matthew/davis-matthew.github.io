@@ -1,0 +1,30 @@
+.Project{
+    display: grid
+}
+.Project-Title{
+    font-weight:bolder;
+    text-align: center;
+    font-size: larger;
+}
+.Project-Image{
+    border: 1px;
+    margin: 8px;
+}
+.Project-Date{
+    margin: 8px;
+    font-size: large;
+}
+.Project-Advisor{
+    flex:1;
+    font-size: large;
+    margin: 10px;
+}
+.Project-Coworkers{
+    flex:1;
+    font-size: large;
+    margin: 10px;
+}
+.Project-Description{
+    font-size: large;
+    margin: 10px;
+}

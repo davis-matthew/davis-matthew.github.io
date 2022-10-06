@@ -1,0 +1,40 @@
+#mainNavigationBar {
+    margin-top: 0;
+    border-top: 0;
+    padding-top: 0;
+    
+    margin-left: 0;
+    border-left: 0;
+    padding-left: 0;
+    
+    margin-right: 0;
+    border-right: 0;
+    padding-right: 0;
+
+    display: flex;
+    width:100%;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-bottom: 2px solid rgb(245, 140, 40);
+    
+    background-color: rgb(255, 155, 70);
+    
+}
+.NavBarButton {
+    flex: 1;
+    color: white;
+    text-shadow: 0px 1px 2px #444444;
+    
+    margin-right: -2px;
+    
+    border-right: 2px solid rgb(225, 120, 30);
+    border-left: 2px solid rgb(225, 120, 30);
+}
+.NavBarButton:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.NavBarText {
+    text-align:center;
+}
+

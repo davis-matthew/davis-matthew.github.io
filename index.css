@@ -1,0 +1,34 @@
+#Picture-Resume-Bio {
+    display: grid;
+}
+#Picture-Resume {
+    grid-column: 1;
+    vertical-align: top;
+    line-height: 2;
+    margin: 25px;
+}
+#Picture {
+    width:  400px;
+    height: 400px;
+    background-image: url(resources/mattdavis.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#Resume {
+    font-size: large;
+    text-align: center;
+}
+#Bio {
+    vertical-align: top;
+    margin: 25px;
+    grid-column: 2;
+    font-size: large;
+}
+table{
+    border-spacing: 30px;
+}
+body{
+    overflow-y: hidden; 
+}
+
