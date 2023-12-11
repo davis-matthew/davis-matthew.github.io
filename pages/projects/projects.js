@@ -10,7 +10,7 @@ const projects = [
         "../../resources/THE-Icon.png\" width = 150px height = 150px",
         "https://danielwilliams.tech/spellchecker",
         "Daniel Williams",
-        "Disappointed by the naivety of existing spellcheckers for code, Daniel and I have set out on creating a tool which is better geared towards real-world code. We aim for convenient high precision spelling and grammatical fixes as well as other analyzes ran on comments and strings within the code."
+        "Disappointed by the naïvety of existing spellcheckers for code, Daniel and I have set out on creating a tool which is better geared towards real-world code. We aim for convenient high precision spelling and grammatical fixes as well as other analyses ran on comments and strings within the code."
     ]
 ]
 
