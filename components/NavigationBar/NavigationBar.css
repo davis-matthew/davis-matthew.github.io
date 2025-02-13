@@ -16,9 +16,9 @@
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    border-bottom: 2px solid rgb(245, 140, 40);
+    border-bottom: 2px solid #67a9cf;
     
-    background-color: rgb(255, 155, 70);
+    background-color: #02818a;
     
 }
 .NavBarButton {
@@ -28,8 +28,8 @@
     
     margin-right: -2px;
     
-    border-right: 2px solid rgb(225, 120, 30);
-    border-left: 2px solid rgb(225, 120, 30);
+    border-right: 2px solid #67a9cf;
+    border-left: 2px solid #67a9cf;
 }
 .NavBarButton:hover {
     background-color: rgba(255, 255, 255, 0.3);

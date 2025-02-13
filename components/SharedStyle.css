@@ -1,6 +1,6 @@
 #Header-Text {
     text-align: center;
-    font-size: x-large;
+    font-size: xx-large;
 }
 iframe{
     margin:0;
@@ -14,7 +14,7 @@ html, body
     border: 0;
     padding: 0;
     overflow-x: hidden; 
-    background-color: bisque;
+    background-color: #bdc9e1;
     height: 100%;
     width: 100%;
 }
