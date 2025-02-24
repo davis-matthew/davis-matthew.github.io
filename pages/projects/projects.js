@@ -23,7 +23,7 @@ const projects = [
         "",
         "",
         "",
-        "A DSL & accompanying code generation tool that allows mathematicians to write a simple description of a combinatoric/brute-force math search and receive highly optimized code deployable as volunteer computing tasks. \
+        "A DSL & accompanying code generation tool that allows mathematicians to write a simple description of a brute-force math search and receive highly optimized code deployable as volunteer computing tasks. \
         <b>Frobenius</b> automatically leverages relevant theorems and proven bounds to cut down the problem search space"
     ]
 ]

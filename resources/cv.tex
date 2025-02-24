@@ -1,0 +1,346 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{ifthen}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\usepackage{hyperref}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% Link Formatting
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdftitle={Matthew J. Davis Resume/CV},
+    pdfpagemode=FullScreen,
+}
+
+% add a header:
+    % 1 - Name
+    % 2 - Street Address
+    % 3 - City & State
+    % 4 - Zip
+    % 5 - Phone Number
+    % 6 - Email
+    % 7 - Github
+    % 8 - Website
+\newcommand{\header}[8]{
+    \filbreak
+    \begin{center}
+        {\LARGE \textbf{#1}}
+        
+        #2\ \ \textbullet
+        \ \ #3\ \ \textbullet
+        \ \ #4
+        \\
+        #5\ \ \textbullet
+        \ \ #6
+        \\
+        #7\ \ \textbullet
+        \ \ #8
+    \end{center}
+
+    \hrule
+}
+
+% define a work experience:
+    % 1 - Company Name
+    % 2 - Title
+    % 3 - Start Date
+    % 4 - End Date
+    % 5 - Supervisor
+    % 6 - Description
+\newcommand{\experience}[6]{
+    \filbreak
+    \item
+	\headerrow
+		{\textbf{#1}}
+            %\ifthenelse{\equal{#4}{}}
+                {{\textbf{\emph{#3}}}}
+            % {{\textbf{\emph{#3 -- #4}}}}
+	\\
+	\headerrow
+		{\emph{#2}}
+            {\emph{Supervisor: #5}}
+	#6
+}
+
+% define an education experience:
+    % 1 - College/University Name
+    % 2 - Year
+    % 3 - Degree
+    % 4 - Advisor
+    % 5 - Accolades
+\newcommand{\education}[5]{
+    \filbreak
+    \item
+	\headerrow
+		{\textbf{#1}}
+		{\textbf{\emph{#2}}}
+	\\
+	\headerrow
+		{\emph{#3}}
+		{\emph{#4}}
+	#5
+}
+
+% define a new research project:
+    % 1 - Title
+    % 2 - Date
+    % 3 - Advisor
+    % 4 - Collaborators
+    % 5 - Description
+\newcommand{\research}[5]{
+    \filbreak
+    \item
+        \headerrow
+            {\textbf{#1}}
+            {\textbf{\emph{#2}}}
+        \\
+        \headerrow
+            {\emph{Advisor: #3}}
+            {\emph{Collaborators: #4}}
+        #5
+}
+
+% define a new publication:
+\newcommand{\publication}[3]{
+    \filbreak
+    \item[\textbf{#1}]- #2 \href{#3}{Link}
+}
+
+% Content
+\begin{document}
+
+\header
+    {Matthew J. Davis}
+    {3918 Teal Fern Ct.} {Houston, TX.} {77059}
+    {(713)-806-0852}
+    {\href{mailto:matthewdavis.professional@gmail.com} {matthewdavis.professional@gmail.com}}{\url{https://github.com/davis-matthew}}
+    {\url{https://davis-matthew.github.io}}
+
+\vspace{-0.4em}
+\subsection*{Education}
+\begin{itemize}
+	\parskip=0.1em
+
+        \education
+            {Georgia Institute of Technology} {2022 - Present} 
+            {Ph.D Computer Science} {Advisors: Dr. Vivek Sarkar, Dr. Vijay Ganesh}
+            {
+                \begin{itemize*}
+                    \item President's Fellow
+                \end{itemize*}
+            }
+
+	\education
+            {Texas A\&M University -- College Station} {2022} 
+            {B.S. of Computer Science \& Engineering} {}
+            {
+                \begin{itemize*}
+                    \item Engineering Honors
+                    \item Summa Cum Laude
+                    \item Undergraduate Research Scholar
+                \end{itemize*}
+            }
+
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Technical Skills}
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+	\item[Languages:]
+        Java, \CPP, Python, Cuda, C, Bash, SQL, JavaScript 
+	\item[Tools \& Frameworks:]
+	MPI, OpenMP, Thread Sanitizer, LLVM
+\end{description*}
+\end{indentsection}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Experience}
+\begin{itemize}
+	\parskip=0.1em
+
+	\experience
+            {Helios Solutions}
+            {Software Engineering Intern}
+            {2022} {}
+            {Mr. Joel Busa}
+            {
+                \begin{itemize*}
+                    \item Developed software and developer infrastructure tools used by customer Intuitive Machines on their lunar landers: IM-1, IM-2, \& IM-3. 
+    
+                    \item Created graphic user interface tools for customer TTTech's switch and cable modeling.
+                \end{itemize*}               
+            }
+
+	\experience
+            {Argonne National Lab}
+            {Research Aide}
+            {2021} {}
+            {Dr. Yanfei Guo}
+            {
+                \begin{itemize*}
+                    \item Assisted the pmodel's MPICH team by integrating automated concurrency bug detection passes into their CI systems.
+                    \item Adapted symbolic execution tool KLEE to automatically generate values for unit testing of MPI library functions.
+                \end{itemize*}
+            }
+
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Research}
+\begin{itemize}
+        \parskip=0.1em
+
+        \research
+        {PoLLyMer - Improving Program Verification via LLMs} {2024 -- Present}
+        {Dr. Vijay Ganesh} {Ignacio Di Leva}
+        {
+            \begin{itemize*}
+                \item Outperformed SOTA program invariant generation tools (traditional \& LLM-based) with a more flexible generation structure. 
+                \item Combines LLM generation with source-level static code transformations and a refinement loop using symbolic feedback from a verifier.
+                \item Pending review for publication
+            \end{itemize*}
+        }
+
+        \research
+        {Regent - Configuration Generation for NN Verification} {2024 -- Present}
+        {Dr. Vijay Ganesh} {Salil Kamath}
+        {
+            \begin{itemize*}
+                \item Creating a reinforcement learning model trained using fuzzed NN instances to generate per-instance hyperparameter configurations for NN verifiers such as AlphaBetaCrown, optimizing solve time.
+            \end{itemize*}
+        }
+
+        \research
+        {OMPCompound - Hybrid OpenMP Data Mapping Violation Detection \& Repair} {2022 -- Present}
+        {Dr. Vivek Sarkar} {Lechen Yu}
+        {
+            \begin{itemize*}
+                \item This project aims to combine existing tools and some new analysis to tackle the problem of OpenMP Device Data Mapping Consistency Violations. 
+                \item Using OMPSanitizer (static detection), OMPMemOpt (static repair), Arbalest (dynamic detection), \& a new static analysis pass AIR to:
+                    \begin{itemize*}
+                        \item Reduce the slowdown/overhead of Arbalest's dynamic analysis
+                        \item Lower the false positive rate of OMPSanitizer
+                        \item Use the repair guidance from OMPMemOpt to repair the bugs automatically
+                    \end{itemize*}
+            \end{itemize*}
+        }
+
+        \research
+        {HPCTest - Detecting Heterogeneous Bugs in Scientific Computing Software} {2022 -- 2024}
+        {Dr. Vivek Sarkar} {Manish Motwani}
+        {
+            \begin{itemize*}
+                \item Combined LLM input generation, static analysis, guided fuzzing, \& differential testing to create a fuzzing-based bug detection system which is scalable to large HPC \& Scientific Computing systems.
+                \item Developed tools to guide the fuzzer using feedback based off analysis of runtime values and execution patterns.
+                \item Pending review for publication
+            \end{itemize*}
+        }
+
+        \research
+        {Extending OpenRace for CUDA Race Detection} {2020 -- 2021}
+        {Dr. Jeff Huang} {Brad Swain, Coderrect Inc.}
+        {
+            \begin{itemize*}
+                \item Extended static data race detection tool OpenRace to model and detect races in CUDA 8 and before (no cooperative groups) and fixed flaws in the OpenMP Device offload modeling which improved results on the DataRaceBench benchmark.
+                \item This work was merged into the OpenRace repository.
+            \end{itemize*}
+        }
+        
+        \research
+        {Dynamatic OpenMP Race Detector} {2019 -- 2020}
+        {Dr. Jeff Huang} {Dylan Theriot, Fatma Elsheimy}
+        {
+            \begin{itemize*}
+                \item Developed a hybrid (static \& dynamic) program analysis tool. This tool finds data race bugs in OpenMP programs by combining results from the HPCRace static analysis tool \& Google Thread Sanitizer reports. 
+                \item Improved the performance on benchmark DataRaceBench, keeping all true positives of HPCRace and disproving all false positives.
+                \item This work is published at: \href{https://hdl.handle.net/1969.1/194411}{Dynamatic: An OpenMP Race Detection Tool Combining Static and Dynamic Analysis}
+            \end{itemize*}
+        }
+        
+        \research
+        {NEO-UFO} {2019}
+        {Dr. Jeff Huang} {Yahui Sun, Matthew Chen, Andrew Chin, Andreas Tsouloupas}
+        {
+            \begin{itemize*}
+                \item Wrote a static analysis pass to identify regions in the Chromium browser base which were unlikely to have Use-After-Free (UAF) bugs. Converted these regions into Thread Sanitizer blacklist files to toggle off the expensive tracing and analysis for dynamic analysis tool UFO, greatly reducing the overhead.
+            \end{itemize*}
+        }
+
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Honors \& Awards}
+\begin{itemize}
+        \parskip=0.1em
+        
+        \item Eagle Scout
+
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Publications}
+\begin{itemize}
+        \parskip=0.1em
+        \item[]
+            % \begin{center}
+            %    \textbf{Georgia Institute of Technology (2022 -- Present)}
+            %\end{center}
+            %\begin{center}
+            %    \textbf{Texas A\&M University (2018 -- 2022)}
+            %\end{center}
+            \begin{itemize*}
+                \publication
+                    {2022} 
+                    {\textbf{Davis, Matthew James}; Theriot, Dylan (2022). Dynamatic: An OpenMP Race Detection Tool Combining Static and Dynamic Analysis. Bachelor's Thesis.}
+                    {https://hdl.handle.net/1969.1/194411}
+            \end{itemize*}
+\end{itemize}
+
+
+\end{document}

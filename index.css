@@ -27,8 +27,17 @@
 }
 table{
     border-spacing: 30px;
+    padding-bottom: 0px;
+    border-collapse: collapse;
 }
 body{
-    overflow-y: hidden; 
+    overflow-y: auto; 
 }
 
+tr{
+    padding-bottom: 0px;
+}
+table td{
+    padding: 5px;
+    margin: 0;
+}
