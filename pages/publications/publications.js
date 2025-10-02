@@ -1,7 +1,7 @@
 publications = [
     ["Georgia Institute Of Technology (2022 - present)",
         [
-
+            "2025 - Salil Kamath, <b>Matthew Davis</b>, Jonathan Andreasen, Yatis Dodia, and Vijay Ganesh. Automated VNN solver configuration selection via deep reinforcement learning. In <i>International Symposium on AI Verification</i>. <a href=\"https://openreview.net/forum?id=PT9TETWLad\">Link</a>"
         ]
     ],
     ["Texas A&M University (2018 - 2022)",
@@ -10,7 +10,6 @@ publications = [
         ]
     ]
 ]
-
 
 
 document.addEventListener("DOMContentLoaded", function(event){

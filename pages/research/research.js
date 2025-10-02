@@ -7,46 +7,40 @@
 //  Description
 const projects = [
     [
-        "PoLLyMer - Invariant Generation via a Combination of LLMs, Static Transformations, and In-Context Verifier Feedback",
-        "../../resources/pollymer_flowchart.png width:75%;height:75%",
+        "Verified LLM-Based Code Translation",
+        "../../resources/resilientai_pipeline-1.png width:75%;height:50%",
         "2024 - Present",
         "<a href=\"https://vganesh1.github.io/\">Dr. Vijay Ganesh</a>",
-        "<a href=\"https://www.linkedin.com/in/ignacio-di-leva\">Ignacio Di Leva</a>",
-        "An LLM-based program invariant generation tool that consists of: \
+        "",
+        "We leverage verifier feedback to fine-tune large language models and can train embeddings to match semantically equivalent forms, then during inference we have a translation loop with validators providing feedback to guide repair \
+        <br><br>Tasks include: \
         <ul> \
-            <li>Static analysis code transformations that pre-process the code</li> \
-            <li>LLM that takes code as input and outputs a version with invariants</li> \
-            <li>A feedback loop between the LLM and a verifier that allows the LLM to leverage in-context learning</li> \
-        </ul>\
-        This work is pending review for publication."
+            <li>Translating legacy & non-portable HPC code to modern languages and programming models</li> \
+            <li>Translating Online Encyclopedia of Integer Sequences (OEIS) entries to Lean and C/C++</li> \
+            <li>Translating loops to loop-invariant annotated loops for program verification</li> \
+        </ul>"
     ],
     [
-        "AIR - Arbalest Instrumentation Reduction",
+        "REGENT - Configuration Generation for NN Verification",
+        "../../resources/linearizenn-cactus-vbs.png width:75%;height:75%",
+        "2024 - Present",
+        "<a href=\"https://vganesh1.github.io/\">Dr. Vijay Ganesh</a>",
+        "Salil Kamath",
+        "NN Verification tools such as <a href=\"https://github.com/Verified-Intelligence/alpha-beta-CROWN\">AlphaBetaCrown</a> prove that a model's output specifications cannot be violated by a valid input. \
+        We create a reinforcement learning model trained using fuzzed NN instances which given an instance, generates a optimized configuration of per-instance solver hyperparameters for the fastest solve time"
+    ],
+    [
+        "Arbalest Instrumentation Reduction (AIR) - Hybrid OpenMP Data Mapping Violation Detection & Repair",
         "",
         "2024 - Present",
         "<a href=\"https://vsarkar.cc.gatech.edu/\">Dr. Vivek Sarkar</a>",
         "<a href=\"http://lechenyu.io/\">Lechen Yu</a>",
         "Arbalest is a dynamic analysis tool that detects OpenMP Data Mapping Violations. \
         It instruments every single memory access on the host and kernel, but this is unnecessary. \
-        Static analysis can greatly reduce the amount of instrumented analysis calls through exploitation of the OpenMP specification and data mapping problem structure."
-    ],
-    [
-        "REGENT - Configuration Generation for NN Verification",
-        "",
-        "2024 - Present",
-        "<a href=\"https://vganesh1.github.io/\">Dr. Vijay Ganesh</a>",
-        "Salil Kamath",
-        "NN Verification tools such as <a href=\"https://github.com/Verified-Intelligence/alpha-beta-CROWN\">AlphaBetaCrown</a> prove that a model's output specifications cannot be violated by a valid input. \
-        We create a model which given an NN instance, generates a optimized configuration of solving parameters for the fastest solve time."
-    ],
-    [
-        "OMPCompound - Hybrid OpenMP Data Mapping Violation Detection & Repair",
-        "../../resources/OMPCompound.png\" width:200px;height:300px",
-        "2022 - Present",
-        "<a href=\"https://vsarkar.cc.gatech.edu/\">Dr. Vivek Sarkar</a>",
-        "<a href=\"http://lechenyu.io/\">Lechen Yu</a>",
-        "Existing tools OMPSanitizer (static), OmpMemOpt (static) & Arbalest (dynamic) perform analysis on OpenMP Data Mapping Violations. \
-        This project aims to combine the tools utilizing the best qualities of both tools and automatically repair the detected bugs."
+        Static analysis can greatly reduce the amount of instrumented analysis calls through exploitation of the OpenMP specification and data mapping problem structure. \
+        Next, we can further optimize using the filter provided by static analysis tool OMPSanitizer to select specific target regions to instrument. \
+        We can then repair the data mapping using Arbalest results. \
+        Last, we can optimize the data movement by using OMPMemOpt to find extraneous data"
     ],
     [
         "HPCTest - Automatically Detecting Heterogeneous Bugs in High-Performance Computing Scientific Software",

@@ -201,6 +201,19 @@
 \begin{itemize}
 	\parskip=0.1em
 
+    \experience
+            {Oak Ridge National Lab}
+            {Research Student Intern}
+            {2025} {}
+            {Dr. Keita Teranishi}
+            {
+                \begin{itemize*}
+                    \item Developed a novel legacy code-translation infrastructure 
+    
+                    \item Work under review for publication
+                \end{itemize*}               
+            }
+
 	\experience
             {Helios Solutions}
             {Software Engineering Intern}
@@ -235,37 +248,35 @@
         \parskip=0.1em
 
         \research
-        {PoLLyMer - Improving Program Verification via LLMs} {2024 -- Present}
-        {Dr. Vijay Ganesh} {Ignacio Di Leva}
+        {Verified LLM-Based Code Translation} {2024 -- Present}
+        {Dr. Vijay Ganesh} {}
         {
             \begin{itemize*}
-                \item Outperformed SOTA program invariant generation tools (traditional \& LLM-based) with a more flexible generation structure. 
-                \item Combines LLM generation with source-level static code transformations and a refinement loop using symbolic feedback from a verifier.
-                \item Pending review for publication
+                \item Translating legacy \& non-portable HPC code to modern languages and programming models
+                \item Translating Online Encyclopedia of Integer Sequences (OEIS) entries to Lean and C/C++
+                \item Translating loops to loop-invariant annotated loops for program verification
+                \item Large Language Models in a translation loop with validators providing feedback to guide repair
             \end{itemize*}
         }
 
         \research
-        {Regent - Configuration Generation for NN Verification} {2024 -- Present}
+        {Configuration Generation for NN Verification} {2024 -- Present}
         {Dr. Vijay Ganesh} {Salil Kamath}
         {
             \begin{itemize*}
-                \item Creating a reinforcement learning model trained using fuzzed NN instances to generate per-instance hyperparameter configurations for NN verifiers such as AlphaBetaCrown, optimizing solve time.
+                \item Created a reinforcement learning model trained using fuzzed NN instances to generate per-instance hyperparameter configurations for NN verifiers
+                \item Optimized solve time, keeping up with expert-tuned configurations.
             \end{itemize*}
         }
 
         \research
-        {OMPCompound - Hybrid OpenMP Data Mapping Violation Detection \& Repair} {2022 -- Present}
-        {Dr. Vivek Sarkar} {Lechen Yu}
+        {Hybrid OpenMP Data Mapping Violation Detection \& Repair} {2022 -- Present}
+        {Dr. Vivek Sarkar} {Dr. Lechen Yu}
         {
             \begin{itemize*}
-                \item This project aims to combine existing tools and some new analysis to tackle the problem of OpenMP Device Data Mapping Consistency Violations. 
-                \item Using OMPSanitizer (static detection), OMPMemOpt (static repair), Arbalest (dynamic detection), \& a new static analysis pass AIR to:
-                    \begin{itemize*}
-                        \item Reduce the slowdown/overhead of Arbalest's dynamic analysis
-                        \item Lower the false positive rate of OMPSanitizer
-                        \item Use the repair guidance from OMPMemOpt to repair the bugs automatically
-                    \end{itemize*}
+                \item Reducing Arbalest Instrumentation using compiler analysis
+                \item Further optimizing by selecting a subset of target regions using OMPSanitizer's static analysis results
+                \item Optimizing and repairing mapping data movement via OMPMemOpt \& Arbalest results
             \end{itemize*}
         }
 
@@ -276,7 +287,6 @@
             \begin{itemize*}
                 \item Combined LLM input generation, static analysis, guided fuzzing, \& differential testing to create a fuzzing-based bug detection system which is scalable to large HPC \& Scientific Computing systems.
                 \item Developed tools to guide the fuzzer using feedback based off analysis of runtime values and execution patterns.
-                \item Pending review for publication
             \end{itemize*}
         }
 
@@ -334,6 +344,12 @@
             %\begin{center}
             %    \textbf{Texas A\&M University (2018 -- 2022)}
             %\end{center}
+            \begin{itemize*}
+                \publication
+                    {2025} 
+                    {Salil Kamath, \textbf{Davis, Matthew James}, Jonathan Andreasen, Yatis Dodia, and Vijay Ganesh. Automated VNN solver configuration selection via deep reinforcement learning. In \textit{International Symposium on AI Verification}.}
+                    {https://openreview.net/forum?id=PT9TETWLad}
+            \end{itemize*}
             \begin{itemize*}
                 \publication
                     {2022} 
